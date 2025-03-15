@@ -1,0 +1,18 @@
+# Project Intelligence
+
+- The project uses a modular microservices architecture.
+- Flask and Python are used for the backend services.
+- Vanilla JavaScript is used for the existing Chat WebUI, and React may be used for new SEO dashboard and potentially refactored components.
+- Docker Compose is used for local development and Kubernetes for production deployment.
+- Redis is used for caching.
+- Prometheus and  are used for monitoring and visual analytics.
+- GitHub Actions is used for CI/CD.
+- Extensive testing is integrated throughout the project (pytest).
+- Linting and auto-fix are setup complete (flake8, black, isort, pre-commit).
+- The project uses a multi-stage Dockerfile to optimize image size.
+- The project uses environment variables for configuration.
+- The project uses a reverse proxy to route requests to the appropriate services.
+- The project uses `setup.sh` for easy environment setup.
+- The project uses `dev.sh` for easy access to service shells.
+- The project uses `quality.sh` for running tests and linting.
+- The project has comprehensive testing and linting setup with pytest, flake8, black, and isort.

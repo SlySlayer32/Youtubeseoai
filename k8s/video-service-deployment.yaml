@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: video-service
+  namespace: youtube
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: video-service
+  template:
+    metadata:
+      labels:
+        app: video-service
+    spec:
+      containers:
+      - name: video-service
+        image: <DOCKER_REGISTRY>/video-service:latest
+        ports:
+        - containerPort: 5003
+        env:
+          - name: YOUTUBE_CREDENTIALS
+            valueFrom:
+              secretKeyRef:
+                name: youtube-credentials
+                key: credentials

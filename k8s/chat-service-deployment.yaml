@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chat-service
+  namespace: youtube
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chat-service
+  template:
+    metadata:
+      labels:
+        app: chat-service
+    spec:
+      containers:
+      - name: chat-service
+        image: <DOCKER_REGISTRY>/chat-service:latest
+        ports:
+        - containerPort: 5000
+        env:
+          - name: REDIS_URL
+            value: redis://redis:6379

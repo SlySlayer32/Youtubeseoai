@@ -1,0 +1,8 @@
+"terminal.integrated.profiles.windows": {
+  "PowerShell Admin": {
+    "path": "powershell.exe",
+    "args": ["-NoExit", "-Command", "Start-Process powershell -Verb RunAs"],
+    "icon": "terminal-powershell"
+  },
+  // Keep any other existing profiles here
+}

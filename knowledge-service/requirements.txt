@@ -1,0 +1,6 @@
+Flask
+Flask-CORS
+pytest
+flake8
+black
+isort

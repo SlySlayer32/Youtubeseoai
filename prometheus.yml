@@ -1,0 +1,24 @@
+global:
+  scrape_interval:     15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: 'api-gateway'
+    static_configs:
+      - targets: ['localhost:9000']
+
+  - job_name: 'chat-service'
+    static_configs:
+      - targets: ['localhost:9001']
+
+  - job_name: 'seo-service'
+    static_configs:
+      - targets: ['localhost:9002']
+
+  - job_name: 'knowledge-service'
+    static_configs:
+      - targets: ['localhost:9003']
+
+  - job_name: 'video-service'
+    static_configs:
+      - targets: ['localhost:9004']

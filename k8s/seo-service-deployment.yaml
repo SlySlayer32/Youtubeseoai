@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: seo-service
+  namespace: youtube
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: seo-service
+  template:
+    metadata:
+      labels:
+        app: seo-service
+    spec:
+      containers:
+      - name: seo-service
+        image: <DOCKER_REGISTRY>/seo-service:latest
+        ports:
+        - containerPort: 5001
+        env:
+          - name: YOUTUBE_API_KEY
+            valueFrom:
+              secretKeyRef:
+                name: youtube-api-key
+                key: api-key

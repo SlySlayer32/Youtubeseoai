@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-gateway
+  namespace: youtube
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-gateway
+  template:
+    metadata:
+      labels:
+        app: api-gateway
+    spec:
+      containers:
+      - name: api-gateway
+        image: <DOCKER_REGISTRY>/api-gateway:latest
+        ports:
+        - containerPort: 80
+        env:
+          - name: CHAT_SERVICE_URL
+            value: http://chat-service:5000
+          - name: SEO_SERVICE_URL
+            value: http://seo-service:5001
+          - name: KNOWLEDGE_SERVICE_URL
+            value: http://knowledge-service:5002
+          - name: VIDEO_SERVICE_URL
+            value: http://video-service:5003

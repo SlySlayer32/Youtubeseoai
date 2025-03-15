@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "api-gateway"
+version = "0.1.0"
+description = "API Gateway service for microservices architecture"
+authors = [
+    "SlySlayer32 <slyslayerfx@gmail.com>",
+]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.13"
+flask = "^3.1.0"
+requests = "^2.32.3"
+flask-cors = "^4.0.0"
+prometheus-client = "^0.17.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.3.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: knowledge-service
+  namespace: youtube
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: knowledge-service
+  template:
+    metadata:
+      labels:
+        app: knowledge-service
+    spec:
+      containers:
+      - name: knowledge-service
+        image: <DOCKER_REGISTRY>/knowledge-service:latest
+        ports:
+        - containerPort: 5002

@@ -1,0 +1,88 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+bower_components/
+venv/
+env/
+ENV/
+.env
+.venv
+
+# Build outputs
+dist/
+build/
+*.exe
+*.dll
+*.so
+*.dylib
+*.pyc
+
+# Log files
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pip-log.txt
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+.project
+.classpath
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Testing and coverage
+coverage/
+.nyc_output
+.coverage
+htmlcov/
+
+# Misc
+.cache/
+.temp/
+.tmp/
+temp/
+tmp/
+.history/
+*.bak
+*.backup
+*.tmp
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# API Keys and secrets
+*.pem
+.env.*
+config.json
+secrets.json
+
+# Python specific
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.pytest_cache/
+
+# Others
+.vercel
+.next/
+out/
+.nuxt/
+.aider*

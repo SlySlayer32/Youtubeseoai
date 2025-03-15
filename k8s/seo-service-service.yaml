@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: seo-service
+  namespace: youtube
+spec:
+  selector:
+    app: seo-service
+  ports:
+  - port: 5001
+    targetPort: 5001
+  type: ClusterIP
